@@ -48,9 +48,9 @@ const Title = styled.h1`
   font-weight: 200;
 `;
 
-const Desc = styled.p`
-  margin: 20px 0px;
-`;
+// const Desc = styled.p`
+//   margin: 20px 0px;
+// `;
 
 const Price = styled.span`
   font-weight: 100;
@@ -147,6 +147,7 @@ const Product = () => {
     const getProduct = async () => {
       try {
         const res = await publicRequest.get('/products/find/' + id);
+        setProduct(res.data);
         console.log(res.data);
       } catch (err) {
         console.log(err);

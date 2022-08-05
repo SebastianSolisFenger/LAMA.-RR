@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 import { mobile } from '../Responsive';
 import StripeCheckout from 'react-stripe-checkout';
 import { userRequest } from '../RequestMethods';
-import { unstable_HistoryRouter, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const KEY = process.env.REACT_APP_STRIPE;
 
