@@ -208,37 +208,36 @@ const Cart = () => {
         <Bottom>
           <Info>
             {console.log(cart.popularProducts)}
-            {cart
-              ? cart.products?.map((product) => (
-                  <Product key={product.id}>
-                    <ProductDetail>
-                      <Image src={product.img} />
-                      <Details>
-                        <ProductName>
-                          <b>Product:</b> {product.title}
-                        </ProductName>
-                        <ProductId>
-                          <b>ID:</b> {product.id}
-                        </ProductId>
-                        <ProductColor color={product.color} />
-                        <ProductSize>
-                          <b>Size:</b> {product.size}
-                        </ProductSize>
-                      </Details>
-                    </ProductDetail>
-                    <PriceDetail>
-                      <ProductAmountContainer>
-                        <Add />
-                        <ProductAmount>{product.quantity}</ProductAmount>
-                        <Remove />
-                      </ProductAmountContainer>
-                      <ProductPrice>
-                        $ {product.price * product.quantity}
-                      </ProductPrice>
-                    </PriceDetail>
-                  </Product>
-                ))
-              : null}
+
+            {cart.products?.map((product) => (
+              <Product key={product.id}>
+                <ProductDetail>
+                  <Image src={product.img} />
+                  <Details>
+                    <ProductName>
+                      <b>Product:</b> {product.title}
+                    </ProductName>
+                    <ProductId>
+                      <b>ID:</b> {product.id}
+                    </ProductId>
+                    <ProductColor color={product.color} />
+                    <ProductSize>
+                      <b>Size:</b> {product.size}
+                    </ProductSize>
+                  </Details>
+                </ProductDetail>
+                <PriceDetail>
+                  <ProductAmountContainer>
+                    <Add />
+                    <ProductAmount>{product.quantity}</ProductAmount>
+                    <Remove />
+                  </ProductAmountContainer>
+                  <ProductPrice>
+                    $ {product.price * product.quantity}
+                  </ProductPrice>
+                </PriceDetail>
+              </Product>
+            ))}
             <Hr />
           </Info>
           <Summary>

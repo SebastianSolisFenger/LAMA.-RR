@@ -48,9 +48,9 @@ const Title = styled.h1`
   font-weight: 200;
 `;
 
-// const Desc = styled.p`
-//   margin: 20px 0px;
-// `;
+const Desc = styled.p`
+  margin: 20px 0px;
+`;
 
 const Price = styled.span`
   font-weight: 100;
@@ -146,9 +146,9 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await publicRequest.get('/products/find/' + id);
-        setProduct(res.data);
-        console.log(res.data);
+        // const res = await publicRequest.get('/products/find/' + id);
+        setProduct(popularProducts[id]);
+        // console.log(res.data);
       } catch (err) {
         console.log(err);
       }
@@ -169,7 +169,7 @@ const Product = () => {
     // I need to use dispatch caus react doesn't know this is a redux function..
     dispatch(
       // addProduct({ product, quantity, price: product.price * quantity })
-      addProduct({ products, quantity, size, color })
+      addProduct({ ...products, quantity, size, color })
     );
   };
 
@@ -183,8 +183,8 @@ const Product = () => {
         </ImgContainer>
         <InfoContainer>
           <Title>{popularProducts[id].title}</Title>
-          {/* <Desc>{product.desc}</Desc> */}
-          <Price>$ {popularProducts[id].price}</Price>
+          <Desc>{popularProducts[id].desc}</Desc>
+          <Price> {popularProducts[id].price}</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
