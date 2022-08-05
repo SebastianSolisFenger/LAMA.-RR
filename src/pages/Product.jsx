@@ -6,7 +6,7 @@ import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
-import { publicRequest } from '../RequestMethods';
+// import { publicRequest } from '../RequestMethods';
 import { mobile } from '../Responsive';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../redux/cartRedux';
