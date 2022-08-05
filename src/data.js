@@ -50,7 +50,7 @@ export const popularProducts = [
     title: 'Vintage Crusher Tee',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     color: ['black', 'yellow'],
-    price: '$20.00',
+    price: 200,
     size: ['S', 'M', 'L', 'XL', 'XXL'],
   },
   {
@@ -59,7 +59,7 @@ export const popularProducts = [
     title: 'Vintage Crusher Tee',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     color: ['black', 'yellow'],
-    price: '$20.00',
+    price: 30,
     size: ['S', 'M', 'L', 'XL', 'XXL'],
   },
   {
@@ -68,7 +68,7 @@ export const popularProducts = [
     title: 'Vintage Crusher Tee',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     color: ['black', 'yellow'],
-    price: '$20.00',
+    price: 1050,
     size: ['S', 'M', 'L', 'XL', 'XXL'],
   },
   {
@@ -77,7 +77,7 @@ export const popularProducts = [
     title: 'Vintage Crusher Tee',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     color: ['black', 'yellow'],
-    price: '$20.00',
+    price: 350,
     size: ['S', 'M', 'L', 'XL', 'XXL'],
   },
   {
@@ -86,7 +86,7 @@ export const popularProducts = [
     title: 'Vintage Crusher Tee',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     color: ['black', 'yellow'],
-    price: '$20.00',
+    price: 150,
     size: ['S', 'M', 'L', 'XL', 'XXL'],
   },
   {
@@ -95,7 +95,7 @@ export const popularProducts = [
     title: 'Vintage Crusher Tee',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     color: ['black', 'yellow'],
-    price: '$20.00',
+    price: 450,
     size: ['S', 'M', 'L', 'XL', 'XXL'],
   },
   {
@@ -104,7 +104,7 @@ export const popularProducts = [
     title: 'Vintage Crusher Tee',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     color: ['black', 'yellow'],
-    price: '$20.00',
+    price: 200,
     size: ['S', 'M', 'L', 'XL', 'XXL'],
   },
 ];
