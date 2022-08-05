@@ -10,6 +10,7 @@ import { publicRequest } from '../RequestMethods';
 import { mobile } from '../Responsive';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../redux/cartRedux';
+import { popularProducts } from '../data';
 
 const Container = styled.div``;
 
@@ -134,8 +135,9 @@ const Product = () => {
   const location = useLocation();
   // eslint-disable-next-line
   const id = location.pathname.split('/')[2];
+  console.log(`id => ${id}`);
 
-  const [product, setProduct] = React.useState({});
+  const [products, setProduct] = React.useState({});
   const [quantity, setQuantity] = React.useState(1);
   const [size, setSize] = React.useState('');
   const [color, setColor] = React.useState('');
@@ -145,7 +147,7 @@ const Product = () => {
     const getProduct = async () => {
       try {
         const res = await publicRequest.get('/products/find/' + id);
-        setProduct(res.data);
+        console.log(res.data);
       } catch (err) {
         console.log(err);
       }
@@ -166,7 +168,7 @@ const Product = () => {
     // I need to use dispatch caus react doesn't know this is a redux function
     dispatch(
       // addProduct({ product, quantity, price: product.price * quantity })
-      addProduct({ ...product, quantity, size, color })
+      addProduct({ products, quantity, size, color })
     );
   };
 
@@ -176,16 +178,16 @@ const Product = () => {
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src={product.img} />
+          <Image src={popularProducts[id].img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>{product.title}</Title>
-          <Desc>{product.desc}</Desc>
-          <Price>$ {product.price}</Price>
+          <Title>{popularProducts[id].title}</Title>
+          {/* <Desc>{product.desc}</Desc> */}
+          <Price>$ {popularProducts[id].price}</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
-              {product.color?.map((c) => (
+              {popularProducts[id].color?.map((c) => (
                 <FilterColor color={c} key={c} onClick={() => setColor(c)} />
               ))}
               {/* <FilterColor color="black" />
@@ -195,7 +197,7 @@ const Product = () => {
             <Filter>
               <FilterTitle>Size</FilterTitle>
               <FilterSize onChange={(e) => setSize(e.target.value)}>
-                {product.size?.map((s) => (
+                {popularProducts[id].size?.map((s) => (
                   <FilterSizeOption key={s}>{s}</FilterSizeOption>
                 ))}
                 {/* <FilterSizeOption>XS</FilterSizeOption>
