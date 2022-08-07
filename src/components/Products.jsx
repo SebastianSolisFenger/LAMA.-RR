@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { popularProducts } from '../data';
@@ -96,9 +96,11 @@ const Products = ({ cat, filters, sort }) => {
 
   return (
     <Container>
-      {filteredProducts.map((item, index) => (
-        <Product item={item} key={item.id} />
-      ))}
+      {filteredProducts
+        ? filteredProducts.map((item, index) => (
+            <Product item={item} key={item.id} />
+          ))
+        : products.map((item, index) => <Product item={item} key={item.id} />)}
     </Container>
   );
 };
