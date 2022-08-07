@@ -49,7 +49,7 @@ export const popularProducts = [
     img: 'https://elanskis.com/media/catalog/product/e/l/elan-t-shirt-white-logo-pst94919-3d.png',
     title: 'Vintage Crusher Tee',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    color: ['black', 'yellow', 'blue', 'red'],
+    color: ['black', 'yellow', 'blue', 'red', 'green'],
     price: 200,
     size: ['S', 'M', 'L', 'XL', 'XXL'],
   },

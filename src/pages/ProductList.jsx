@@ -62,6 +62,8 @@ const ProductList = () => {
       [e.target.name]: value,
     });
   };
+  console.log(`filters => ${JSON.stringify(filters)}`);
+  console.log(`sort => ${sort}`);
 
   return (
     <Container>
