@@ -96,7 +96,7 @@ const Products = ({ cat, filters, sort }) => {
 
   return (
     <Container>
-      {filteredProducts
+      {filteredProducts.length !== 0
         ? filteredProducts.map((item, index) => (
             <Product item={item} key={item.id} />
           ))
